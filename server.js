@@ -9,7 +9,8 @@ app.use(bodyParser.json());
 
 app.listen(port,(error)=>{
     if(error){
-        console.log('Erro ao conectar o servidor');;
+        console.log('Erro ao conectar o servidor');
+        return;
     }
     console.log(`Servidor activado em http:localhost:${port}`);
 });
