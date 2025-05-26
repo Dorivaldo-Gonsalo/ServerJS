@@ -1,11 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const port = 14477;;
+const port = 14477;
+const nav = require('./routes/web');
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+nav(app);
+
 
 app.listen(port,(error)=>{
     if(error){
