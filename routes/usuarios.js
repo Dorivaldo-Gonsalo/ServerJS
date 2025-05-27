@@ -1,14 +1,17 @@
 const {Router} = require('express');
 const router = Router();
-const db = require('../db');
+const controller = require('../Controllers/usuarioController');
 
-router.get('/api/usuarios', (req, res)=>{
-    //res.send('Teste de rota');
-    db.query(
-        'select * from usuarios', (req, res)=>{
-            if(error) return res.serverStatus(500).json({ erro: error.message });
-            res.json(resultado);    
-        });
-});
+//GET
+router.get('/api/usuarios', controller.index);
+
+// SHOW
+router.get('/api/usuarios/:id', controller.show);
+
+//DELETE
+router.delete('/api/usuarios/:id', controller.delete);
+
+//UPDATE
+router.put('/api/usuarios/:id', controller.update);
 
 module.exports = router;
