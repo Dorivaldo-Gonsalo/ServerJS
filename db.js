@@ -1,6 +1,6 @@
 const mysql = require('mysql2');
 
-const conexao = mysql.createPool({
+const conexao = mysql.createConnection({
     host:'localhost',
     port:3306,
     user:'root',
@@ -9,4 +9,12 @@ const conexao = mysql.createPool({
 
 });
 
-module.exports = conexao.promise();
+conexao.connect(error =>{
+    if(error){
+        console.log('Erro ao conectar com o banco de dados');
+        return;
+    }
+    console.log('Conexão bem sucedida!');
+})
+
+module.exports = conexao;
