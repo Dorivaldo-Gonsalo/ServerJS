@@ -3,10 +3,12 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const port = 14477;
 const nav = require('./routes/web');
+const db = require('./db');
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+app.use(express.static('public')); // função par consumir o ServerJS na pasta public
 nav(app);
 
 
