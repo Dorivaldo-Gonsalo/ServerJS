@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxe.ao</title>
+</head>
+
+<body>
+    <h1>Dashboard - Todos os registros</h1>
+
+    <div id="dados"></div>
+
+    <script>
+        function carregarDados(endpoint, titulo, campos) {
+            const res = await fetch('http://localhost:14477/endpoint');
+            const dados = await res.json();
+
+            let html = <h2> (titulo) </h2>;
+            html += <table><thead><tr>;
+            campos.forEach(c=>html+=<th>c</th>);
+            html += <th>Ação</th></tr></thead><tbody>;
+            
+            dados.forEach(item => html += <tr>;
+            campos.forEach(c => html += <td>{item[c]}</td>);
+                        html += `
+                        <td>
+                            <button class='edit' onclick="editar('endpoint', {item.id})">Editar</button>
+                            <button class='delete' onclick="deletar('endpoint', {item.id})">Remover</button>
+                        </td>
+                    </tr>`;
+        
+                    );
+            html += </tbody></table>
+            document.getElementById('dados').innerHTML +=html;
+        }
+
+        //Funcao para carregar
+        carregarDados('usuarios','Usuários',['id', 'nome', 'email', 'senha', 'imagem']);
+        carregarDados('residencias','Residências',['id', 'endereco', 'imagem']);
+        carregarDados('contratos','Contratos',['id', 'usuario_id', 'residencia_id', 'data_inicio', 'data_fim', 'status']);
+    </script>
+</body>
+
+</html>

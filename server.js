@@ -17,5 +17,5 @@ app.listen(port,(error)=>{
         console.log('Erro ao conectar o servidor');
         return;
     }
-    console.log(`Servidor activado em http:localhost:${port}`);
+    console.log(`Servidor activado em http://localhost:${port}`);
 });

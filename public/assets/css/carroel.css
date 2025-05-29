@@ -1,0 +1,96 @@
+.main-carrocel {
+    margin-top:1%;
+    position: relative;
+    width: 100%;
+    height: 50rem;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Container que envolve os itens para fazer o efeito de transição */
+.items-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Cada item ocupa toda a largura do wrapper */
+.item {
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #f0f0f0;
+    text-align: center;
+
+}
+
+/* Destaque o item ativo */
+.item-1 {
+    background-image: url('../images/banner-01.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 41rem;
+}
+
+.item-2 {
+    background-image: url('../images/banner-02.jpg');
+      background-position: center;
+    background-size: cover;
+         height: 41rem;
+}
+
+.item-3 {
+    background-image: url('../images/banner-03.jpg');  
+    background-position: center;
+    background-size: cover;
+        height: 41rem;
+}
+
+/* estilo do texto */
+.header-text {
+    margin-top: 20%;
+}
+
+.header-text span {
+    font-size: 18px;
+    color: rgb(14, 12, 12);
+}
+.category{
+background-color: white;
+height: 50px;
+padding: 10px 10px;
+}
+em{
+    color: orangered;
+}
+
+h2 {
+    color: white;
+    margin-top: 10px;
+    font-size: 44px;
+}
+
+/* Botões de navegação */
+.car {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.car:hover {
+    background-color: orangered;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}

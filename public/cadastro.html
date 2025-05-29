@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/log.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+        integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+        integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/regular.min.css"
+        integrity="sha512-8hM9a+2hrLBhOuB3uiy+QIXBsu6Qk+snsP1CboFQW6pdt/yYz0IcDp/+CGv5m39r9doGUc/zw6aBpyLF6XFgzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-icons/14.3.0/simpleicons.svg"
+        integrity="sha512-DzC7h7+bDlpXPDQsX/0fShhf1dLxXlHuhPBkBo/5wJWRoTU6YL7moeiNoej6q3wh5ti78C57Tu1JwTNlcgHSjg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>relaxe.com.ao</title>
+</head>
+
+<body>
+
+    <div class="super-header">
+        <div class="inform">
+            <ul style="margin-top: 1px;">
+                <li><a class="local" href=""><i class="fa fa-envelope"></i>relaxe@gmail.com |</a></li>
+                <li><a class="local" href=""><i class="fa fa-map"></i> Angola\Luanda</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-lg-5" id="contact">
+        <div class="logo">
+            <a href="http://localhost:14477" class="a-logo">
+                <h1>Relaxe.ao</h1>
+            </a>
+        </div>
+        <form id="usuarioForm" action="http://localhost:14477/api/usuarios/create" method="post">
+            <div class="row">
+                <div class="col-lg-12">
+                    <fieldset>
+                        <label for="nome"> Nome</label>
+                        <input type="nome" name="nome" id="nome" placeholder="Seu Nome..." autocomplete="on" required>
+                    </fieldset>
+                </div>
+                <div class="col-lg-12">
+                    <fieldset>
+                        <label for="email">Email </label>
+                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Seu email..."
+                            required="">
+                    </fieldset>
+                </div>
+                <div class="col-lg-12">
+                    <fieldset>
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha" placeholder="" autocomplete="on">
+                    </fieldset>
+                </div>
+                <div class="col-lg-12">
+                    <fieldset>
+                        <label for="imagem">Photo</label>
+                        <input type="file" name="imagem" id="imagem">
+                    </fieldset>
+                </div>
+                <div class="col-lg-12">
+                    <fieldset>
+                        <button type="submit" class="orange-button">Cadastrar</button>
+                    </fieldset>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="col-lg-8" style="text-align: center;">
+                <p>Copyright © 2025 Relaxe Ltd. Todos os direitos reservados.
+
+                    Propriedade: <a rel="nofollow" href="https://github.com/dorivaldo-gonsalo" target="_blank">Tec
+                        Inform</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/form-usuarios.js"></script>
+</body>
+
+</html>
