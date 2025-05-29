@@ -14,16 +14,16 @@
 
     <script>
         function carregarDados(endpoint, titulo, campos) {
-            const res = await fetch('http://localhost:14477/endpoint');
-            const dados = await res.json();
+            const res =  fetch('http://localhost:14477/endpoint');
+            const dados =  res.json();
 
             let html = <h2> (titulo) </h2>;
             html += <table><thead><tr>;
-            campos.forEach(c=>html+=<th>c</th>);
+            campos.forEach(<th>c</th>);
             html += <th>Ação</th></tr></thead><tbody>;
             
-            dados.forEach(item => html += <tr>;
-            campos.forEach(c => html += <td>{item[c]}</td>);
+            dados.forEach(<tr>;
+            campos.forEach(<td>{item[c]}</td>);
                         html += `
                         <td>
                             <button class='edit' onclick="editar('endpoint', {item.id})">Editar</button>
