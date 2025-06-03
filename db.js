@@ -14,7 +14,7 @@ conexao.connect(error =>{
         console.log('Erro ao conectar com o banco de dados');
         return;
     }
-    console.log('Conexão bem sucedida!');
+    console.log('Conexão com a dase de dados bem sucedida!');
 })
 
 module.exports = conexao;

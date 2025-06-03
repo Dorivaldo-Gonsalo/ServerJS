@@ -29,3 +29,4 @@ setInterval(() => {
   showItem(currentIndex + 1);
 }, 3000);
 */
+
